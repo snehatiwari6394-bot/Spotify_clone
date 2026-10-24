@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="brand" href="#home">
+            <i class="fa-brands fa-spotify"></i>
+            <span>spotify</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home" id="homeLink">Home</a>
+            <a href="#about" id="aboutLink">About</a>
+        </div>
+    </nav>
+
+    <main class="container" id="home">
+
+        <section class="songList">
+            <h1>Best of NCS — no copyright sound</h1>
+            <p class="subtitle">Your playlist, your vibe.</p>
+
+            <div class="songItemContainer">
+
+                <div class="songItem" data-index="0">
+                    <img src="images/MeroVrindavan.jpg" alt="Mero Vrindavan">
+                    <span class="songName">mero-vrindavan</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="1">
+                    <img src="images/RadhaRaman.jpg" alt="Radha Raman">
+                    <span class="songName">radha raman hare hare</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="2">
+                    <img src="images/RadhaVallabh.jpg" alt="Joi Joi Pyaaro Kare">
+                    <span class="songName">joi joi pyaaro kare</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="3">
+                    <img src="images/RadhaRani.jpg" alt="De ke charnon ki seva">
+                    <span class="songName">de ke charnon ki seva</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="4">
+                    <img src="images/TuHiMeraShabHai.jpg" alt="Tu hi mera shab hai">
+                    <span class="songName">tu hi mera shab hai</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="5">
+                    <img src="images/TereLiye.png" alt="Tere Liye">
+                    <span class="songName">tere liye</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="6">
+                    <img src="images/MannMera.jpg" alt="Mann Mera">
+                    <span class="songName">mann mera</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="songItem" data-index="7">
+                    <img src="images/Deewaaniyat.jpg" alt="Deewaniyat">
+                    <span class="songName">deewaniyat</span>
+                    <span class="songDuration">--:--</span>
+                    <button class="songItemPlay" aria-label="Play song">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <aside class="songBanner">
+            <div class="music-note note-one">♫</div>
+            <div class="music-note note-two">𝄞</div>
+            <div class="banner-caption">
+                Let the music<br>take you away.
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="bottom">
+
+        <div class="progress-area">
+            <div class="track-time">
+                <span id="currentTime">00:00</span>
+                <span id="durationTime">--:--</span>
+            </div>
+
+            <input type="range" id="myProgressBar"
+                   min="0" max="100" value="0" step="0.1"
+                   aria-label="Song progress">
+        </div>
+
+        <div class="player-lower">
+
+            <div class="songInfo">
+                <img src="musicgif.gif" alt="" id="gif">
+                <span id="masterSongName">mero-vrindavan</span>
+            </div>
+
+            <div class="player-controls">
+                <button id="previous" aria-label="Previous song">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button id="masterPlay" aria-label="Play or pause">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button id="forward" aria-label="Next song">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+
+            <div class="volume-control">
+                <button id="muteButton" aria-label="Mute or unmute">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+
+                <input type="range" id="volumeBar"
+                       min="0" max="1" step="0.01" value="0.7"
+                       aria-label="Volume">
+            </div>
+
+        </div>
+    </footer>
+
+    <div class="about-overlay" id="aboutOverlay" hidden>
+        <section class="about-card" role="dialog"
+                 aria-modal="true" aria-labelledby="aboutTitle">
+
+            <button class="about-close" id="closeAbout" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <i class="fa-brands fa-spotify about-logo"></i>
+
+            <h2 id="aboutTitle">About this Spotify Clone</h2>
+
+            <p>
+                This is a Spotify-inspired music player developed as a
+                front-end learning project using HTML, CSS and JavaScript.
+            </p>
+
+            <p>
+                Play your favourite tracks, skip songs, view song durations,
+                seek through music and adjust the volume.
+            </p>
+
+            <p class="about-note">
+                This is an independent practice project, not the official Spotify website.
+            </p>
+
+            <button class="close-button" id="closeAboutButton">
+                Got it
+            </button>
+
+        </section>
+    </div>
+
+</body>
+</html>
